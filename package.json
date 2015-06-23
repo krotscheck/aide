@@ -1,0 +1,39 @@
+{
+  "name": "aide",
+  "version": "0.1.0",
+  "description": "A license verification tool for JavaScript projects.",
+  "main": "aide.js",
+  "bin": {
+    "aide": "./bin/aide"
+  },
+  "files": [
+    "./bin",
+    "./lib",
+    "LICENSE",
+    "README.md",
+    "aide.js"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "0.23.0",
+    "jasmine": "2.3.1"
+  },
+  "scripts": {
+    "test": "jasmine",
+    "lint": "eslint ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/krotscheck/aide.git"
+  },
+  "keywords": [
+    "license",
+    "npm"
+  ],
+  "author": "Michael Krotscheck <krotscheck@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/krotscheck/aide/issues"
+  },
+  "homepage": "https://github.com/krotscheck/aide"
+}
