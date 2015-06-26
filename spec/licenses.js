@@ -16,20 +16,32 @@ describe('Unit: License List', function () {
   var licenses = require('../lib/licences.js');
 
   it('Should correctly identify SPDX licenses.', function () {
-    /*eslint-disable guard-for-in */
     for (var i = 0; i < licenseNames.length; i++) {
       var name = licenseNames[i];
       expect(licenses.isLicenseValid(name)).toBeTruthy();
     }
-    /*eslint-enable guard-for-in */
   });
 
   it('Should correctly identify invalid license names.', function () {
-    /*eslint-disable guard-for-in */
     for (var i = 0; i < licenseNames.length; i++) {
       var name = licenseNames[i];
       expect(licenses.isLicenseValid('__' + name)).toBeFalsy();
     }
-    /*eslint-enable guard-for-in */
+  });
+
+  it('Should return the full text of every registered license.', function () {
+    for (var i = 0; i < licenseNames.length; i++) {
+      var name = licenseNames[i];
+      var filePath = path.join(__dirname, '..', 'lib', 'licenses', name + '.txt');
+      var fileContent = fs.readFileSync(filePath).toString();
+      expect(licenses.getLicense(name)).toEqual(fileContent);
+    }
+  });
+
+  it('Should return null if an invalid license is requested.', function () {
+    for (var i = 0; i < licenseNames.length; i++) {
+      var name = licenseNames[i];
+      expect(licenses.getLicense('__' + name)).toBeNull();
+    }
   });
 });
