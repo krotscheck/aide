@@ -452,7 +452,7 @@ rules:
 
   # Disallow use of synchronous methods
   # http://eslint.org/docs/rules/no-sync
-  no-sync: 2
+  no-sync: 0
 
 
   #############################################################################
