@@ -13,3 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
+describe('Unit: Command list', function () {
+  'use strict';
+
+  var commands = require('../lib/commands');
+  var getVersion = require('../lib/commands/get_version');
+
+  it('Should contain getVersion.', function () {
+    expect(commands.getVersion).toEqual(getVersion);
+  });
+});

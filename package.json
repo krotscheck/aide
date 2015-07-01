@@ -14,6 +14,7 @@
     "aide.js"
   ],
   "dependencies": {
+    "nopt": "3.0.3"
   },
   "devDependencies": {
     "coveralls": "2.11.2",
@@ -23,8 +24,8 @@
   },
   "scripts": {
     "pretest": "eslint ./",
-    "test": "istanbul cover jasmine",
-    "coveralls": "istanbul cover jasmine && cat ./coverage/lcov.info | coveralls"
+    "test": "istanbul cover --print=detail --include-all-sources jasmine",
+    "coveralls": "istanbul cover --include-all-sources jasmine && cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
