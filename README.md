@@ -1,5 +1,8 @@
 # Aide: Manage your Licenses
+
 [![Build Status](https://travis-ci.org/krotscheck/aide.svg?branch=master)](https://travis-ci.org/krotscheck/aide)
+[![Coverage Status](https://coveralls.io/repos/krotscheck/aide/badge.svg?branch=master)](https://coveralls.io/r/krotscheck/aide?branch=master)
+[![NPM Version](https://img.shields.io/npm/v/aide.svg)](https://www.npmjs.com/package/aide)
 
 Aide - short for legal aide - is a commandline tool that simplifies the management of your 
 javascript projects' licensing dependencies. It assists you in enforcing license compliance, so 
