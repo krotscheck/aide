@@ -17,12 +17,15 @@
     "spdx-license-list": "2.0.0"
   },
   "devDependencies": {
+    "coveralls": "2.11.2",
     "eslint": "0.23.0",
+    "istanbul": "0.3.17",
     "jasmine": "2.3.1"
   },
   "scripts": {
     "pretest": "eslint ./",
-    "test": "jasmine"
+    "test": "istanbul cover jasmine",
+    "coveralls": "istanbul cover jasmine && cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
