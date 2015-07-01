@@ -3,3 +3,11 @@ node_js:
   - "node"
   - "stable"
   - "0.12"
+branches:
+  only:
+  - master
+  - develop
+  - /^feature\/.*$/
+  - /^hotfix\/.*$/
+  - /^release\/.*$/
+
