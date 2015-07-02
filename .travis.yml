@@ -12,3 +12,10 @@ branches:
   - /^release\/.*$/
 after_success:
   - npm run coveralls
+deploy:
+  provider: npm
+  email: krotscheck@gmail.com
+  api_key:
+    secure: ZqLrsknqjNmvjuLljg2vxJOJZbHoOF9Acj//wZDOmYPIHkaIaCUYq8ZjRPcE67va3sTHKpz1vTPgXOsXPjfRkuXA8XVU1TpmaLGPYpD71Ka0BdbTN3ibMT18r1vMYT62SD8ZHMv2yLlrzL3QEp40N5yOSy78Jfrf0Ub7321ZufAsru5c74XGOvS7z8hlK5ya9kog3GGjIaot6uf8gCNjgAQVEphNiV20Xwct94QR7CnxJ76sir9BkcqLpufg55U61FC5dWVlzDzBHOzktiP1H9lLvkKxrhPu6a4oWDsxFZ+/MF+vkgea+LVvVJShrcpZKwKabwnbgz6NxgcKeqgMhwHsn3e1W05OT7vP3Sp0x3oVSn1s3XtMDzeWZzpm2k188uN3CnsUWXoVYO5CiRYMGiCuPxyN+En6hRKwX5M4VOevouNOmsiRRF/HFBsm6FqB9vu3280fesDIF5vfAwJv8KqkCxvMJuqgAEH1cNShwfA+sFcI/bH6XMWqd+356IOg2aiL485aFdxzG2yyKaqrrSMWbwACVd0KF+kluBS50npiu7k/pitudZ+DiWy3LPUcyqipF2r9lXtTcXkok3i94RRF9//yHksS7C2LspfkVrhYaGhC6LtbvSVhyOXM07KASy85HEQdmqD8y1ajVyKn/1CB1VhxPC+UXDcOmnJJEoI=
+  on:
+    tags: true
