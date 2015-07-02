@@ -7,8 +7,8 @@
     "aide": "./bin/aide"
   },
   "files": [
-    "./bin",
-    "./lib",
+    "bin",
+    "lib",
     "LICENSE",
     "README.md",
     "aide.js"
