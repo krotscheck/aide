@@ -14,12 +14,18 @@
  * limitations under the License.
  */
 
-(function () {
+describe('Unit: Root API', function () {
   'use strict';
 
-  module.exports = {
-    'commands': require('./lib/commands'),
-    'licences': require('./lib/licences')
-  };
+  var api = require('../aide');
+  var licences = require('../lib/licences');
+  var commands = require('../lib/commands');
 
-})();
+  it('Should contain the licences package.', function () {
+    expect(api.licences).toEqual(licences);
+  });
+
+  it('Should contain the commands package.', function () {
+    expect(api.commands).toEqual(commands);
+  });
+});
