@@ -17,18 +17,10 @@
 describe('Unit: CLI Args', function () {
   'use strict';
 
+  // Ensure that bootstrap is setup properly.
+  require('./helpers/argv').initialize();
+
   var fs = require('fs');
-  var oldargs;
-
-  beforeEach(function () {
-    oldargs = process.argv;
-    process.argv = oldargs.slice(0);
-  });
-
-  afterEach(function () {
-    process.argv = oldargs;
-  });
-
   var args = require('../lib/args');
 
   it('Should recognize --version as the version flag.', function () {

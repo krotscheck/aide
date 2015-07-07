@@ -17,10 +17,13 @@
 describe('Unit: CLI Execution Tests', function () {
   'use strict';
 
+  // Ensure that bootstrap is setup properly.
+  require('./helpers/argv').initialize();
+
   var cli = require('../lib/cli');
   var commands = require('../lib/commands');
   var stdout = require('./helpers/stdout');
-  var oldargs, output;
+  var output;
 
   beforeEach(function () {
     output = [];
@@ -28,17 +31,12 @@ describe('Unit: CLI Execution Tests', function () {
       output.push(buffer);
     });
 
-    // Capture argv.
-    oldargs = process.argv;
-    process.argv = oldargs.slice(0);
-
     // Spyon exit, make sure it doesn't get called.
     spyOn(process, 'exit');
   });
 
   afterEach(function () {
     stdout.clear();
-    process.argv = oldargs;
   });
 
   it('Should exit cleanly with no options.', function () {
