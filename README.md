@@ -1,7 +1,6 @@
 # Aide: Manage your Licenses
 
 [![Join the chat at https://gitter.im/krotscheck/aide](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/krotscheck/aide?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
 [![Build Status](https://travis-ci.org/krotscheck/aide.svg?branch=master)](https://travis-ci.org/krotscheck/aide)
 [![Coverage Status](https://coveralls.io/repos/krotscheck/aide/badge.svg?branch=master)](https://coveralls.io/r/krotscheck/aide?branch=master)
 [![NPM Version](https://img.shields.io/npm/v/aide.svg)](https://www.npmjs.com/package/aide)
