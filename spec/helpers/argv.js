@@ -14,18 +14,41 @@
  * limitations under the License.
  */
 
-describe('Unit: Command list', function () {
+(function () {
   'use strict';
 
-  var commands = require('../lib/commands');
-  var getVersion = require('../lib/commands/get_version');
-  var pkg = require('../lib/package');
+  // Create a copy of the application arguments.
+  var oldargs = process.argv.slice(0);
 
-  it('Should contain getVersion.', function () {
-    expect(commands.getVersion).toEqual(getVersion);
-  });
+  /**
+   * Create a fresh copy of the existing arguments.
+   *
+   * @returns {void}
+   */
+  function setup () {
+    process.argv = oldargs.slice(0);
+  }
 
-  it('Should contain getPackageLicense.', function () {
-    expect(commands.getPackageLicense).toEqual(pkg.getLicense);
-  });
-});
+  /**
+   * Reset argv.
+   *
+   * @returns {void}
+   */
+  function clear () {
+    process.argv = oldargs.slice(0);
+  }
+
+  /**
+   * Initialize the argv capture for a specific test.
+   *
+   * @return {void}
+   */
+  function initialize () {
+    beforeEach(setup);
+    afterEach(clear);
+  }
+
+  module.exports = {
+    'initialize': initialize
+  };
+})();

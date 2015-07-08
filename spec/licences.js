@@ -60,4 +60,8 @@ describe('Unit: License List', function () {
       expect(licenses.getLicense('__' + name)).toBeNull();
     }
   });
+
+  it('Should should contain a constant named "UNKNOWN".', function () {
+    expect(licenses.UNKNOWN).toEqual('UNKNOWN');
+  });
 });

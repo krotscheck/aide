@@ -6,6 +6,9 @@
   "bin": {
     "aide": "./bin/aide"
   },
+  "engines": {
+    "node": ">=0.12.6"
+  },
   "files": [
     "bin",
     "lib",
