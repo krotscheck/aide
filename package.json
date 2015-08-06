@@ -31,6 +31,7 @@
     "release-minor": "npm version minor && git push --follow-tags",
     "pretest": "eslint ./",
     "test": "istanbul cover --print=detail --include-all-sources jasmine",
+    "posttest": "env",
     "coveralls": "istanbul cover --include-all-sources jasmine && cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
