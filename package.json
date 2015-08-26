@@ -21,7 +21,8 @@
   },
   "devDependencies": {
     "coveralls": "2.11.2",
-    "eslint": "0.23.0",
+    "eslint": "1.2.1",
+    "eslint-config-openstack": "1.2.2",
     "istanbul": "0.3.17",
     "jasmine": "2.3.1"
   },
@@ -29,6 +30,7 @@
     "release-patch": "npm version patch && git push --follow-tags",
     "release-major": "npm version major && git push --follow-tags",
     "release-minor": "npm version minor && git push --follow-tags",
+    "lint": "eslint ./",
     "pretest": "eslint ./",
     "test": "istanbul cover --print=detail --include-all-sources jasmine",
     "coveralls": "istanbul cover --include-all-sources jasmine && cat ./coverage/lcov.info | coveralls"
